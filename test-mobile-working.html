@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Test - Guest House Manual</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f0f0f0;
+        }
+        
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .device-frame {
+            display: inline-block;
+            margin: 10px;
+            vertical-align: top;
+        }
+        
+        .device-label {
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            border: 3px solid #333;
+            border-radius: 30px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .tablet-frame {
+            width: 768px;
+            height: 600px;
+            border: 3px solid #333;
+            border-radius: 20px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .instructions {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .instructions h2 {
+            margin-top: 0;
+            color: #321662;
+        }
+        
+        .instructions ul {
+            line-height: 1.8;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+        }
+        
+        .feature {
+            background: #f8f6fb;
+            padding: 8px 12px;
+            border-left: 3px solid #321662;
+            margin: 10px 0;
+        }
+        
+        .test-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #321662;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        
+        .test-button:hover {
+            background: #4a2f8a;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="instructions">
+            <h2>📱 Mobile Testing Guide</h2>
+            
+            <div class="feature">
+                <strong>Mobile Features to Test:</strong>
+            </div>
+            
+            <ul>
+                <li><strong>Bottom Panel:</strong> Swipe up on the gray handle bar to expand the media panel</li>
+                <li><strong>Tab Navigation:</strong> Tap the icons (Speaker, Music Note, Bell) to switch between sections</li>
+                <li><strong>Narration:</strong> Tap the purple play button to hear David Attenborough narrate the manual</li>
+                <li><strong>Jingles:</strong> Play the three memory jingles (Door Code, WiFi, Departure)</li>
+                <li><strong>Reminders:</strong> Toggle the reminder switches on/off</li>
+                <li><strong>Language:</strong> Change language using the dropdown in the header</li>
+                <li><strong>Share:</strong> Each section has share buttons for different platforms</li>
+            </ul>
+            
+            <div class="feature">
+                <strong>Quick Links:</strong>
+            </div>
+            
+            <a href="minimal.html" target="_blank" class="test-button">Open Full Page</a>
+            <a href="minimal.html" target="phone-frame" class="test-button">Load in Phone</a>
+            <a href="minimal.html" target="tablet-frame" class="test-button">Load in Tablet</a>
+        </div>
+        
+        <div class="device-frame">
+            <div class="device-label">📱 iPhone 12 Pro (375x812)</div>
+            <div class="phone-frame">
+                <iframe src="minimal.html" name="phone-frame"></iframe>
+            </div>
+        </div>
+        
+        <div class="device-frame">
+            <div class="device-label">📱 iPad Mini (768x600)</div>
+            <div class="tablet-frame">
+                <iframe src="minimal.html" name="tablet-frame"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
